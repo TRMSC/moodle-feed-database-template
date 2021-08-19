@@ -1,10 +1,22 @@
-<!-- Feed v.1.2 (listtemplate.html) - Copyright (C) 2021, TRMSC - https://trmsc1.wordpress.com/ -->
+<!-- Feed v.2.0 (listtemplate.html) - Copyright (C) 2021, TRMSC - https://trmsc1.wordpress.com/ -->
 <!-- GNU General Public Licence 3.0 - http://www.gnu.de/documents/gpl-3.0.en.html -->
 
-<span style="font-family: comic sans ms"><span style="font-size: 0.9375rem;"><div class="alert alert-primary" role="alert"><h5>##userpicture## ##user##</h5><i><sup>##timeadded##&nbsp;</sup></i><h3><b>[[Textzeile]]</b></h3><div style="box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 20px; border-radius: 5px; overflow: hidden; position: relative;display:inline-block;">[[Willst du ein Bild anhängen?]]</div><br>
-<i style=""><span style="font-size: 0.9375rem;">##edit####delete##<br><br>##comments##</span></i>
-<p style="text-align: left;"><span class="" style="color: #BDBDBD">________________</span></p>
-<br>
+<div class="alert alert-primary listEntry"  role="alert">
+<hr style="border-top: 2px solid rgb(231 236 241)!important;">
+    <div class="row">
+        <div class="col">
+            <h5 style="color: #041f37!important">##userpicture## ##user##</h5><i><sup>##timeadded##&nbsp;</sup></i>
+        </div><br>
+        <div class="col rightSpace" style="text-align: right; margin-top: 0px; margin-right: 0px;">
+            <span id="moreOver"><span id="moreStart">Groß anzeigen </span>##more##</span><br>
+            <span id="editOver"><span id="editStart" style="display: none">Bearbeiten </span>##edit##</span><br>
+            <span id="deleteOver"><span id="deleteStart" style="display: none">Löschen </span>##delete##</span><br>
+        </div>
+    </div>
+    <h3 style="overflow-wrap: break-word;"><b>[[Textzeile]]</b></h3>
+    <div id="smallPicture" style="box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 20px; border-radius: 5px; overflow: hidden; position: relative;display:inline-block;">
+        [[Willst du ein Bild anhängen?]]
+    </div>
+    <br>##comments##<hr>
 </div>
-</span>
-</span>
+<br>

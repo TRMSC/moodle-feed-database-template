@@ -1,13 +1,348 @@
-/* Feed v.1.2 (csstemplate.css) - Copyright (C) 2021, TRMSC - https://trmsc1.wordpress.com/ */
+/* Feed v.2.0 (csstemplate.css) - Copyright (C) 2021, TRMSC - https://trmsc1.wordpress.com/ */
 /* GNU General Public Licence 3.0 - http://www.gnu.de/documents/gpl-3.0.en.html */
 
+/* -----------------------------------------------------*/
+/* SETTINGS */
+/* In the following you have the opportunity for taking three settings: */
+/* 1. FONT - 2. RSS-INFO - 3. VALUATION /*
+/* Save your changes and after that reload the page with CTRL+F5.
+/* -----------------------------------------------------*/
+/* -----------------------------------------------------*/
+
+/* SETTING 1: RESET FONT */
+/* Delete this part up to the dotted line if you want to have your theme font. */
+
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@500&display=swap');
+#region-main p, #region-main h1, #region-main h2, #region-main h3, #region-main h4, #region-main h5, #region-main h6, #region-main .nav-tabs, #moreEntry, #listEntry, .comment-link, .comment-ctrl, #searchArea {
+    font-family: 'Livvic';
+}
+
+/* -----------------------------------------------------*/
+
+/* SETTING 2: REMOVE RSS INFO */
+/* This part shows an RSS info when creating a new post. */
+/* If you don't use the RSS-Function you can delete the part up to the dotted line. */
+
+#rssInfo {
+    display: block!important;
+}
+
+/* -----------------------------------------------------*/
+
+/* SETTING 3: RESET OR CHANGE VALUATION SYSTEM */
+/*This part styles the valuation system for using a ❤-scale. */
+/* If you don't want that you can delete or change this part up to the dotted line. */
+
+/* If you want to use a like-scale please create one in the course-settings. /*
+/*   Select a heart for the name and the scale there. */
+/* Then you have to activate the following rights for students in this database: */
+/*   mod/data:rate & mod/data:viewanyrating & mod/data:viewallratings */
+
+.rating-aggregate-label {
+    display: none;
+  }
+.ratingaggregate {
+    visibility: hidden;
+  }
+.ratingaggregate:after {
+    content: "❤";
+    visibility: visible;
+  }
+.ratingform {
+    color: #fff;
+    margin-top: 12px;
+  }
+.iconhelp {
+    visibility: hidden;
+  }
+
+/* -----------------------------------------------------*/
+/* END OF SETTINGS */
+/* -----------------------------------------------------*/
+
+
+/* Loading */
+#region-main {
+    cursor: wait;
+}
+
+/* Search */
+#options > div > *:not( #data_adv_form ) {
+display: none;
+}
+.datapreferences{
+    margin-top: -80px;
+    margin-bottom: 30px;
+}
+#reg_search {
+    display: none!important;
+}
+.boxaligncenter {
+    width: -webkit-fill-available;
+    display: block;
+    background-color: #efefef;
+    margin-top: 20px;
+    border: 1px solid #b8b3b3;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.boxaligncenter tbody{
+    width: 100%;
+    display: inline-table;
+    margin-bottom: 24px;
+}
+.alert-success .close, .alert-danger .close {
+    display: none;
+}
+
+/* Buttons for list and single */
+.nav-tabs .nav-item a[href*="view"]:not([href*="search"]) {
+    background-color: #f7f8d4b8;
+    box-shadow: 0 0 10px 0 #737373;
+    border-radius: 10px;
+    margin-right: 4px;
+    margin-left: 4px;
+    margin-bottom: 5px;  
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    transition: 0.25s;
+}
+.nav-tabs .nav-item a[href*="view"]:not([href*="search"]):hover {
+    background-color: #feffd6b8;
+    transition: 0.25s;
+    box-shadow: rgb(0 0 0 / 20%) 0 0 5px 0;
+    border-color: #bbbcbc78;
+}
+
+/* Button for search */
+.nav-tabs .nav-item a[href*="search"] {
+    background-color: #ecececb8;
+    box-shadow: 0 0 10px 0 #737373;
+    border-radius: 10px;
+    margin-right: 4px;
+    margin-left: 4px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    transition: 0.25s;
+}
+.nav-tabs .nav-item a[href*="search"]:hover {
+    background-color: #f8f6f6b8;
+    transition: 0.25s;
+    box-shadow: rgb(0 0 0 / 20%) 0 0 5px 0;
+    border-color: #bbbcbc78;
+}
+
+/* Button for template */
+.nav-tabs .nav-item a[href*="template"] {
+    background-color: #ffffff00;
+    box-shadow: none;
+}
+
+/* Button for new entries */
 .nav-link[href*="edit"] {
     background-color: #e1f4dab8;
     box-shadow: 0 0 10px 0 #737373;
     border-radius: 10px;
-    margin-right: 8px;
-    margin-bottom: 5px;
+    margin-right: 4px;
+    margin-left: 4px;
+    margin-bottom: 5px;  
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    transition: 0.25s;
 }
-.nav-link[href*="edit"]:before {
-    content: '➕ ';
+.nav-link[href*="edit"]:hover {
+    background-color: #e1f8db;
+    transition: 0.25s;
+    box-shadow: rgb(0 0 0 / 20%) 0 0 5px 0;
+    border-color: #bbbcbc78;
+}
+
+/* Active buttons */
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    background-color: #fff0;
+    padding-bottom: 5px;
+    border-color: #fff0 #fff0 black #fff0;
+    margin-bottom: 20px;
+    margin-right: 12px;
+    margin-left: 12px;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-weight: 700;
+}
+
+/* New entry */
+#page-mod-data-edit #region-main  .mod-data-input .mdl-left{
+    display: flex;
+    align-items: baseline;
+}
+#page-mod-data-edit #region-main .mod-data-input .mdl-left label{
+    display: inline-block;
+    white-space: pre;
+    color: #8f959e;
+    margin-top: 8px;
+}
+#page-mod-data-edit #region-main .basefieldinput {
+    margin-bottom: 0px!important;
+}
+#page-mod-data-edit #region-main .mod-data-input .mdl-left input{
+    width: -webkit-fill-available;
+    height: 1.2rem;
+    background-color: #ffffff00;
+    border-color: #9a9999b3;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0px;
+}
+#page-mod-data-edit #region-main .mod-data-input {
+    width: -webkit-fill-available;
+    margin-bottom: 15px;
+}
+#page-mod-data-edit #region-main .filemanager .fp-restrictions {
+    text-align: left;
+    color: #6c6f73;
+}
+#page-mod-data-edit #region-main .mdl-align.mt-1 {
+    border: 1px solid #b1babb;
+    border-radius: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    background-image: -webkit-linear-gradient(81deg, #90cdb01a, #d0c1c100)!important;
+}
+#page-mod-data-edit #region-main .mdl-align.mt-1 h3 {
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+#page-mod-data-edit #region-main .mdl-align.mt-1 .btn {
+    white-space: break-spaces;
+}
+#page-mod-data-edit #region-main .mdl-align .btn {
+    width: 45%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#page-mod-data-edit #region-main .progress-bar::after {
+    content: 'Bitte warten...';
+}
+.newPart {
+    padding-right: 10px;
+    padding-top: 15px;
+    border: 1px solid #b1babb;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(81deg, #90cdb01a, #d0c1c100)!important;
+}
+
+/* Entries */
+.listEntry {
+    border: 1px solid #c6c8ca;
+    border-radius: 13px;
+}
+.moreEntry {
+    border: 1px solid #c6c8ca;
+    border-radius: 10px;
+}
+.listEntry a, .moreEntry a {
+    color: #041f37;
+}
+#smallPicture img, bigPicture img {
+    max-width: 100%!important;
+}
+#moreStart, #listStart {
+    display: none; 
+    font-size: 1.1rem!important
+}
+#moreOver:hover #moreStart, #listOver:hover #listStart, #editOver:hover #editStart, #deleteOver:hover #deleteStart {
+    display: initial!important;
+}
+#listOver i{
+    font-size: x-large;
+    margin-right: 8px;
+    margin-bottom: 13px;
+}
+.backBtn {
+    float: right;
+}
+
+/* Single */
+#bigPicture img{
+    width: 100%!important;
+}
+.page-link {
+    border-color: #aebecf;
+}
+
+/* Comments */
+.comment-list {
+    border-left: 2px solid #8f8f8f;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+.comment-message {
+    font-size: .9375rem;
+    border: 2px solid #b2b6c2;
+    border-radius: 5px 15px 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.comment-message .time{
+    font-size: smaller;
+}
+.comment-message img.userpicture {
+    width: 23px;
+    height: 23px;
+}
+.comment-message .picture{
+    width: 28px;
+}
+.comment-message .text{
+    margin-right: 28px;
+}
+.comment-message .text_to_html{
+    font-size: larger;
+}
+.comment-area{
+        max-width: 100%;
+}
+.comment-area textarea{
+    margin-top: 10px;
+    color: grey;
+    font-size: 1rem;
+    border-radius: 5px 15px 15px;
+}
+.comment-area .fd{
+    font-size: 0.9375rem;
+    margin-bottom: 0px;
+}
+.comment-area .fd a {
+    border: 1px solid #8d8d8d;
+    border-radius: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #eaeaea;
+}
+.comment-area .fd a:hover {
+    background-color: #f1f1f1;
+    border: 1px solid #8d8d8d;
+    box-shadow: 0 0 5px 0px #8e8e8e;
+    letter-spacing: 0.1px;
+}
+.comment-link{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 500px;
+}
+.comment-ctrl{
+    width: 500px;
+}
+.mdl-left{
+    font-style: normal;
 }

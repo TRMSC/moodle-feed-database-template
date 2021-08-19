@@ -1,0 +1,10 @@
+.nav-link[href*="edit"] {
+    background-color: #e1f4dab8;
+    box-shadow: 0 0 10px 0 #737373;
+    border-radius: 10px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
+.nav-link[href*="edit"]:before {
+    content: '➕ ';
+}

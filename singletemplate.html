@@ -1,29 +1,24 @@
-<!-- Feed v.1.2 (singletemplate.html) - Copyright (C) 2021, TRMSC - https://trmsc1.wordpress.com/ -->
+<!-- Feed v.2.0 (singletemplate.html) - Copyright (C) 2021, TRMSC - https://trmsc1.wordpress.com/ -->
 <!-- GNU General Public Licence 3.0 - http://www.gnu.de/documents/gpl-3.0.en.html -->
 
-<div class="alert alert-warning" role="alert">Es dauert etwas, bis neue Posts auf unserer Startseite zu sehen sind! ⏳</div><br>
-<div class="alert alert-success" role="alert"><span style="font-size: 0.9375rem;"><table><thead><tr><th scope="col">##userpicture##</th><th scope="col">##user##&nbsp;<span>##edit####delete##</span><br><span style="font-weight: normal;"><i>##timeadded##</i></span><br></th>
-    </tr>
-    </thead>
-    <tbody></tbody>
-    </table>
-    </span>
-    <h5><b style="line-height: 100%"><b><br>
-<table>
-<thead>
-<tr>
-<th scope="col"><h5><b><b>[[Textzeile]]</b></b>
-    </h5>
-    </th>
-    </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><span style="font-weight: normal;box-shadow: rgba(0, 0, 0, 0.2) 15px 15px 20px; border-radius: 20px; border-style: solid; border-color: rgba(0, 0, 0, 0.2); overflow: hidden; position: relative;" onclick="return false">[[Willst du ein Bild anhängen?]]</span></td>
-        </tr>
-    </tbody>
-    </table>
-    </b>
-    </b>
-    </h5>
-</div><br>
+<div class="alert alert-success moreEntry" role="alert">
+    <div class="row">
+        <div class="col">
+            <h5 style="color: #041f37!important">##userpicture## ##user##</h5>
+            <i><sup>##timeadded##&nbsp;</sup></i>
+        </div><br>
+        <div class="col rightSpace" style="text-align: right; padding-top: 3px; padding-right: 5px;">
+            <span id="listOver"><span id="listStart">Zurück zum Feed </span>
+            <script>
+                var listLink = window.location.href.split('&')[0]; 
+                document.write("<a href='"+listLink+"'><i class=" + '"' + "fa fa-search-minus"+'"'+"></i></a>");
+            </script></span><br>
+            <span id="editOver"><span id="editStart" style="display: none">Bearbeiten </span>##edit##</span><br>
+            <span id="deleteOver"><span id="deleteStart" style="display: none">Löschen </span>##delete##</span><p></p>
+        </div>
+    </div>
+    <h3 style="overflow-wrap: break-word;"><b>[[Textzeile]]</b></h3>
+    <div id="bigPicture" style="box-shadow: rgba(0, 0, 0, 0.2) 10px 10px 20px; border-radius: 5px; overflow: hidden; position: relative;display:inline-block;" onclick="return false">
+        [[Willst du ein Bild anhängen?]]
+    </div>
+</div>

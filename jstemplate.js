@@ -1,4 +1,4 @@
-/* Feed v.2.0 (jstemplate.js) - Copyright (C) 2021, TRMSC - https://trmsc1.wordpress.com/ */
+/* Feed v.2.1 (jstemplate.js) - Copyright (C) 2021, TRMSC - https://trmsc1.wordpress.com/ */
 /* GNU General Public Licence 3.0 - http://www.gnu.de/documents/gpl-3.0.en.html */
 
     window.onload = function() {
@@ -28,7 +28,7 @@
         function prepareList () {
             if ($("#data_adv_form").length) { 
                 $(".alert-success, .alert-danger").appendTo(".boxaligncenter");
-                var inputContent = document.getElementById("u_fn").value + document.getElementById("u_ln").value + document.getElementById("f_2161").value;
+                var inputContent = $("#firstnameSearch input").val() + $("#lastnameSearch input").val() + $("#textfieldSearch input").val();
                 if ((inputContent == "") && ($(".boxaligncenter .alert-success").length) && (!$(".boxaligncenter .alert-success:contains('/')").length) ) { 
                     location.reload();
                 }

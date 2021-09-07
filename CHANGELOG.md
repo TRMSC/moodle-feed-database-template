@@ -18,3 +18,6 @@ GNU General Public Licence 3.0 - http://www.gnu.de/documents/gpl-3.0.en.html
 - Opportunity for settings
 - Create scripts
 - Remove external jQuery
+
+### v.2.1
+- Remove id conflict
